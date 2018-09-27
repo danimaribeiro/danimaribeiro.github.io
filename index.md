@@ -8,5 +8,5 @@ I'm Danimar Ribeiro, last time I wrote here I was living in Florianópolis, Braz
 
 Follow my Youtube channel to see videos about Odoo.
 
-Check all the videos [here](https://danimaribeiro.github.io/videos.html)
+Check all the videos [here](https://danimaribeiro.github.io/videos)
 
