@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
 import { Resume } from './pages/Resume';
 import { PrintResume } from './pages/PrintResume';
+import { PhysicsEasterEgg } from './components/PhysicsEasterEgg';
 import { contentData } from './data/content';
 
 export const App: React.FC = () => {
@@ -35,7 +36,8 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#090a0f] text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#090a0f] text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950 overflow-x-hidden">
+      <PhysicsEasterEgg />
       <Navbar
         currentView={currentView}
         onNavigate={(view) => {

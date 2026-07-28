@@ -21,10 +21,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-[#090a0f]/80 border-b border-slate-800/60 no-print">
-      <div className="max-w-5xl mx-auto px-6 h-18 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-6 h-18 flex items-center justify-between relative z-10">
         <button
-          onClick={() => onNavigate('home')}
+          onClick={() => {
+            onNavigate('home');
+            window.dispatchEvent(new Event('trigger-physics-easter-egg'));
+          }}
           className="flex items-center gap-2.5 text-lg font-bold text-slate-100 hover:text-emerald-400 transition-colors cursor-pointer focus:outline-none"
+          title="Click to drop physics emojis! (Easter Egg)"
         >
           <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.2)]">
             <Terminal size={18} />

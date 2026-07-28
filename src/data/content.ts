@@ -88,12 +88,12 @@ export const contentData: Record<'en' | 'pt', Content> = {
       langToggle: "PT-BR",
     },
     hero: {
-      badge: "⚡ Senior / Staff Backend Engineer (10+ Years)",
+      badge: "⚡ Senior / Staff Backend Engineer (15+ Years)",
       title: "Hey, I'm Danimar Ribeiro",
       role: "Senior Backend Engineer specializing in Python, Cloud Architecture (AWS), and Enterprise Systems.",
       location: "📍 Based in Florianópolis, Brazil — Available for Global Remote Roles (US/EU).",
       description: [
-        "With over a decade of software engineering experience, I specialize in architecting distributed backend systems, automating mission-critical business workflows, and solving extreme performance bottlenecks.",
+        "With over 15 years of software engineering experience, I specialize in architecting distributed backend systems, automating mission-critical business workflows, and solving extreme performance bottlenecks.",
         "At AdRoll, I redesigned core email marketing delivery services in Python, boosting throughput from 5 to 300 emails per second. Prior to that, I left my Physics degree to Co-Found Trustcode, serving as CTO to scale the company to 50+ enterprise clients and leading the architectural development of Odoo ERP localization for Brazil. Currently, I am open to new opportunities while actively researching and building database internals in Rust and Zig."
       ],
       ctaCollaborate: "Get in Touch",
@@ -149,7 +149,7 @@ export const contentData: Record<'en' | 'pt', Content> = {
       subtitle: "Senior Backend Engineer | Python • AWS Cloud • Distributed Systems & ERP Architecture",
       downloadText: "Download Resume (.PDF)",
       pdfName: "resume-en.pdf",
-      placeholderNotice: "Executive Profile: 10+ years in backend software engineering across global cloud environments (AWS ECS, Postgres) and highly concurrent data processing. Former CTO & Co-Founder scaling enterprise ERP systems to 50+ B2B clients. Strong foundation in analytical problem-solving with 3 years of academic Physics.",
+      placeholderNotice: "Executive Profile: 15+ years in backend software engineering across global cloud environments (AWS ECS, Postgres) and highly concurrent data processing. Former CTO & Co-Founder scaling enterprise ERP systems to 50+ B2B clients. Strong foundation in analytical problem-solving with 3 years of academic Physics.",
       skillsTitle: "Core Competency Matrix",
       skills: [
         {
@@ -274,12 +274,12 @@ export const contentData: Record<'en' | 'pt', Content> = {
       langToggle: "EN",
     },
     hero: {
-      badge: "⚡ Senior / Staff Backend Engineer (+10 Anos)",
+      badge: "⚡ Senior / Staff Backend Engineer (+15 Anos)",
       title: "Olá, sou Danimar Ribeiro",
       role: "Engenheiro Sênior de Backend com especialidade em Python, Arquitetura Cloud (AWS) e Sistemas Corporativos.",
       location: "📍 Baseado em Florianópolis, Brasil — Disponível para vagas remotas globais (EUA/Europa).",
       description: [
-        "Com mais de uma década de experiência em engenharia de software, sou especialista em arquitetar sistemas distribuídos, automatizar fluxos críticos e resolver gargalos extremos de performance.",
+        "Com mais de 15 anos de experiência em engenharia de software, sou especialista em arquitetar sistemas distribuídos, automatizar fluxos críticos e resolver gargalos extremos de performance.",
         "Na AdRoll, reconstruí os serviços core de entrega de e-mail em Python, elevando o throughput de 5 para 300 envios por segundo. Antes disso, deixei a graduação em Física para Co-Fundar a Trustcode, atuando como CTO escalando a empresa para mais de 50 clientes corporativos e desenhando a arquitetura de localização do Odoo ERP no Brasil. Atualmente estou aberto a novas oportunidades enquanto construo e pesquiso arquiteturas de Bancos de Dados em Rust e Zig."
       ],
       ctaCollaborate: "Entrar em Contato",
@@ -335,7 +335,7 @@ export const contentData: Record<'en' | 'pt', Content> = {
       subtitle: "Engenheiro Sênior de Backend | Python • Nuvem AWS • Sistemas Corporativos & ERP",
       downloadText: "Baixar Currículo (.PDF)",
       pdfName: "resume-pt.pdf",
-      placeholderNotice: "Perfil Executivo: +10 anos em engenharia de backend voltada para ambientes cloud globais (AWS ECS, Postgres) e alta escalabilidade. Ex-CTO e Co-Fundador que escalou ERPs para +50 clientes corporativos. Forte base analítica forjada por 3 anos de graduação em Física.",
+      placeholderNotice: "Perfil Executivo: +15 anos em engenharia de backend voltada para ambientes cloud globais (AWS ECS, Postgres) e alta escalabilidade. Ex-CTO e Co-Fundador que escalou ERPs para +50 clientes corporativos. Forte base analítica forjada por 3 anos de graduação em Física.",
       skillsTitle: "Matriz de Competências",
       skills: [
         {

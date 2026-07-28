@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Play, Mail, Linkedin, Youtube, ArrowRight } from 'lucide-react';
 import { Content } from '../data/content';
+import { WaveBackground } from '../components/WaveBackground';
+import { ConstellationBackground } from '../components/ConstellationBackground';
 
 interface HomeProps {
   content: Content;
@@ -12,16 +14,18 @@ export const Home: React.FC<HomeProps> = ({ content, onNavigateToResume }) => {
   const { hero, projects, talksAndVideos, contact } = content;
 
   return (
-    <div className="w-full space-y-24 py-8">
+    <div className="w-full pb-8">
       {/* HERO SECTION */}
-      <section className="relative">
+      <section className="relative flex flex-col justify-center min-h-[calc(100vh-72px)] py-4">
+        <WaveBackground />
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="space-y-6"
+          className="relative z-10 w-full"
         >
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold shadow-[0_0_20px_rgba(16,185,129,0.15)]">
+          <div className="space-y-5">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold shadow-[0_0_20px_rgba(16,185,129,0.15)]">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>{hero.badge}</span>
           </div>
@@ -38,13 +42,13 @@ export const Home: React.FC<HomeProps> = ({ content, onNavigateToResume }) => {
             {hero.location}
           </p>
 
-          <div className="space-y-4 text-slate-300/90 text-base sm:text-lg max-w-3xl leading-relaxed">
-            {hero.description.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
-            ))}
-          </div>
+            <div className="text-base sm:text-lg text-slate-400 space-y-4 max-w-3xl leading-relaxed relative z-10">
+              {hero.description.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
 
-          <div className="pt-4 flex flex-wrap items-center gap-4">
+            <div className="pt-4 flex flex-wrap items-center gap-4 relative z-10">
             <button
               onClick={onNavigateToResume}
               className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all hover:shadow-[0_0_25px_rgba(16,185,129,0.4)] hover:-translate-y-0.5 cursor-pointer"
@@ -60,13 +64,17 @@ export const Home: React.FC<HomeProps> = ({ content, onNavigateToResume }) => {
               <Mail size={17} className="text-emerald-400" />
               <span>{hero.ctaCollaborate}</span>
             </a>
+            </div>
           </div>
         </motion.div>
       </section>
 
-      {/* FEATURED PROJECTS */}
-      <section className="space-y-8">
-        <div className="border-t border-slate-800/80 pt-12">
+      <div className="relative w-full pt-16">
+        <ConstellationBackground />
+        
+        {/* FEATURED PROJECTS */}
+        <section className="space-y-8 relative z-10">
+          <div className="border-t border-slate-800/80 pt-12">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
             {projects.title}
           </h2>
@@ -148,7 +156,7 @@ export const Home: React.FC<HomeProps> = ({ content, onNavigateToResume }) => {
       </section>
 
       {/* TALKS & VIDEOS */}
-      <section className="space-y-6">
+      <section className="space-y-6 relative z-10">
         <div className="border-t border-slate-800/80 pt-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
@@ -199,7 +207,7 @@ export const Home: React.FC<HomeProps> = ({ content, onNavigateToResume }) => {
       </section>
 
       {/* FOOTER / CONTACT */}
-      <footer className="border-t border-slate-800/80 pt-16 pb-8 text-center space-y-8">
+      <footer className="border-t border-slate-800/80 pt-16 pb-8 text-center space-y-8 relative z-10">
         <div className="space-y-3">
           <h3 className="text-2xl font-bold text-white tracking-tight">
             {contact.title}
@@ -253,6 +261,7 @@ export const Home: React.FC<HomeProps> = ({ content, onNavigateToResume }) => {
           {contact.copyright}
         </p>
       </footer>
+      </div>
     </div>
   );
 };
