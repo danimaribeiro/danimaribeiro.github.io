@@ -8,7 +8,7 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
-  base: '/', // Deploy na raiz do domínio danimaribeiro.github.io
+  base: './', // Caminhos relativos de assets solucionam telas brancas em navegadores/CDN
   build: {
     outDir: 'dist',
     emptyOutDir: true
