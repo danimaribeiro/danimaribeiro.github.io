@@ -8,12 +8,10 @@ export interface Project {
   stats?: string;
 }
 
-export interface Talk {
+export interface EngineeringPrinciple {
   title: string;
-  event: string;
-  date: string;
-  url: string;
-  type: 'video' | 'conference' | 'workshop';
+  description: string;
+  icon: 'Zap' | 'Code' | 'ShieldCheck' | 'Database';
 }
 
 export interface Experience {
@@ -49,12 +47,10 @@ export interface Content {
     subtitle: string;
     items: Project[];
   };
-  talksAndVideos: {
+  engineeringPrinciples: {
     title: string;
     subtitle: string;
-    channelLinkText: string;
-    channelUrl: string;
-    items: Talk[];
+    items: EngineeringPrinciple[];
   };
   resumePage: {
     title: string;
@@ -119,28 +115,43 @@ export const contentData: Record<'en' | 'pt', Content> = {
           tags: ["Rust", "Zig", "C++", "C", "Database Internals", "B-Tree Storage"],
           githubUrl: "https://github.com/danimaribeiro/droid",
           stats: "Current R&D Focus"
+        },
+        {
+          title: "Willy Finance",
+          subtitle: "AI-Powered Personal Finance & Investment Tracker",
+          description: "A comprehensive SaaS platform built to track personal finances. Features an integrated AI Agent built with LangGraph and MCP (Model Context Protocol), alongside LLM-powered background jobs for automated bank statement categorization.",
+          tags: ["SaaS", "AI/LLM", "LangGraph", "MCP", "FinTech", "Full-Stack"],
+          demoUrl: "https://www.willyfinance.com",
+          stats: "Live Platform"
+        },
+        {
+          title: "Monge Docs",
+          subtitle: "AI-Powered Chrome Extension",
+          description: "An AI-powered browser extension published on the Chrome Web Store, designed to automate and streamline documentation workflows for developers.",
+          tags: ["AI/LLM", "Browser Extension", "TypeScript", "Productivity"],
+          demoUrl: "https://chromewebstore.google.com/detail/monge-docs-ai-documentati/ncolfoambfnfgiopbmfophmjejaaalom",
+          stats: "Published Extension"
         }
       ]
     },
-    talksAndVideos: {
-      title: "Talks, Tutorials & Mentorship",
-      subtitle: "Empowering developers with architectural best practices in Python, Odoo development, and systems engineering.",
-      channelLinkText: "Explore tutorials on YouTube ➔",
-      channelUrl: "https://www.youtube.com/@DanimarRibeiro",
+    engineeringPrinciples: {
+      title: "Engineering Philosophy",
+      subtitle: "Core principles that guide my architectural decisions and system designs.",
       items: [
         {
-          title: "Workshop: Advanced Odoo Development & Architecture",
-          event: "Odoo Brasil Community Workshop",
-          date: "Open Technical Resource",
-          url: "https://github.com/danimaribeiro/workshop-odoo-development",
-          type: "workshop"
+          title: "Data-Driven Performance",
+          description: "I believe in measuring first. Bottlenecks should be solved by profiling and understanding data flow, not by blindly scaling up infrastructure.",
+          icon: "Zap"
         },
         {
-          title: "Building Electronic Fiscal Document Engines in Python",
-          event: "Python & ERP Community Sessions",
-          date: "Technical Deep-Dive",
-          url: "https://github.com/danimaribeiro/odoo-brazil-eletronic-documents",
-          type: "video"
+          title: "Database-First Architecture",
+          description: "Data outlives code. I specialize in leveraging the full power of PostgreSQL—from complex query optimization to transaction isolation—to build solid foundations before writing application logic.",
+          icon: "Database"
+        },
+        {
+          title: "Resilient by Design",
+          description: "Systems will fail. Designing for graceful degradation, automated recovery, and robust monitoring is non-negotiable for enterprise software.",
+          icon: "ShieldCheck"
         }
       ]
     },
@@ -305,28 +316,43 @@ export const contentData: Record<'en' | 'pt', Content> = {
           tags: ["Rust", "Zig", "C++", "C", "Database Internals"],
           githubUrl: "https://github.com/danimaribeiro/droid",
           stats: "Pesquisa & Estudo Atual"
+        },
+        {
+          title: "Willy Finance",
+          subtitle: "Plataforma de Finanças & Investimentos com IA",
+          description: "SaaS de controle financeiro inteligente. Conta com um Agente de IA integrado construído usando LangGraph e MCP (Model Context Protocol), além de background jobs com LLMs para categorização automática de extratos bancários.",
+          tags: ["SaaS", "AI/LLM", "LangGraph", "MCP", "FinTech", "Full-Stack"],
+          demoUrl: "https://www.willyfinance.com/pt/",
+          stats: "Em Produção"
+        },
+        {
+          title: "Monge Docs",
+          subtitle: "Extensão do Chrome com IA",
+          description: "Extensão para o Google Chrome com Inteligência Artificial integrada e publicada na Web Store, focada em automatizar e otimizar fluxos de documentação para desenvolvedores.",
+          tags: ["AI/LLM", "Chrome Extension", "TypeScript", "Produtividade"],
+          demoUrl: "https://chromewebstore.google.com/detail/monge-docs-ai-documentati/ncolfoambfnfgiopbmfophmjejaaalom",
+          stats: "Publicada na Store"
         }
       ]
     },
-    talksAndVideos: {
-      title: "Palestras, Tutoriais & Mentorias",
-      subtitle: "Capacitação da comunidade em arquiteturas Python escaláveis e melhores práticas no Odoo.",
-      channelLinkText: "Assistir vídeos no YouTube ➔",
-      channelUrl: "https://www.youtube.com/@DanimarRibeiro",
+    engineeringPrinciples: {
+      title: "Filosofia de Engenharia",
+      subtitle: "Princípios fundamentais que guiam minhas decisões de arquitetura e design de sistemas.",
       items: [
         {
-          title: "Workshop: Desenvolvimento Avançado e Arquitetura no Odoo",
-          event: "Odoo Brasil Community Workshop",
-          date: "Capacitação Técnica",
-          url: "https://github.com/danimaribeiro/workshop-odoo-development",
-          type: "workshop"
+          title: "Performance Guiada por Dados",
+          description: "Acredito em medir antes de otimizar. Gargalos devem ser resolvidos perfilando o fluxo de dados, e não apenas escalando infraestrutura às cegas.",
+          icon: "Zap"
         },
         {
-          title: "Construindo Motores para Documentos Fiscais Eletrônicos em Python",
-          event: "Sessões da Comunidade Python & ERP",
-          date: "Apresentação Técnica",
-          url: "https://github.com/danimaribeiro/odoo-brazil-eletronic-documents",
-          type: "video"
+          title: "Arquitetura Database-First",
+          description: "Os dados sobrevivem ao código. Sou especialista em extrair o máximo do PostgreSQL — de otimizações de queries a isolamento de transações — criando bases sólidas antes mesmo de escrever regras de negócio.",
+          icon: "Database"
+        },
+        {
+          title: "Resiliência por Design",
+          description: "Sistemas falham. Projetar para degradação graciosa, recuperação automatizada e monitoramento robusto é inegociável em software corporativo.",
+          icon: "ShieldCheck"
         }
       ]
     },

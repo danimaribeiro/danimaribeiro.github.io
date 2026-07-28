@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Play, Mail, Linkedin, Youtube, ArrowRight } from 'lucide-react';
+import { ArrowRight, Mail, Zap, Code, ShieldCheck, Database, Github, ExternalLink, Linkedin, Youtube } from 'lucide-react';
 import { Content } from '../data/content';
 import { WaveBackground } from '../components/WaveBackground';
 import { ConstellationBackground } from '../components/ConstellationBackground';
@@ -11,7 +11,7 @@ interface HomeProps {
 }
 
 export const Home: React.FC<HomeProps> = ({ content, onNavigateToResume }) => {
-  const { hero, projects, talksAndVideos, contact } = content;
+  const { hero, projects, engineeringPrinciples, contact } = content;
 
   return (
     <div className="w-full pb-8">
@@ -155,54 +155,37 @@ export const Home: React.FC<HomeProps> = ({ content, onNavigateToResume }) => {
         </div>
       </section>
 
-      {/* TALKS & VIDEOS */}
+      {/* ENGINEERING PRINCIPLES */}
       <section className="space-y-6 relative z-10">
-        <div className="border-t border-slate-800/80 pt-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
-              {talksAndVideos.title}
-            </h2>
-            <p className="text-slate-400 text-base max-w-2xl">
-              {talksAndVideos.subtitle}
-            </p>
-          </div>
-          <a
-            href={talksAndVideos.channelUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors whitespace-nowrap"
-          >
-            <span>{talksAndVideos.channelLinkText}</span>
-          </a>
-        </div>
-
-        <div className="space-y-3">
-          {talksAndVideos.items.map((item, idx) => (
-            <a
-              key={idx}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-5 rounded-xl bg-slate-900/50 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition-all hover:translate-x-1"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all">
-                  <Play size={18} className="fill-current" />
+        <div className="border-t border-slate-800/80 pt-12">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
+            {engineeringPrinciples.title}
+          </h2>
+          <p className="text-slate-400 text-base max-w-2xl mb-10">
+            {engineeringPrinciples.subtitle}
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {engineeringPrinciples.items.map((item, idx) => (
+              <div
+                key={idx}
+                className="group flex flex-col p-6 rounded-2xl bg-slate-900/50 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition-all hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-emerald-500/20 transition-all">
+                  {item.icon === 'Zap' && <Zap size={22} className="text-emerald-400" />}
+                  {item.icon === 'Code' && <Code size={22} className="text-emerald-400" />}
+                  {item.icon === 'ShieldCheck' && <ShieldCheck size={22} className="text-emerald-400" />}
+                  {item.icon === 'Database' && <Database size={22} className="text-emerald-400" />}
                 </div>
-                <div>
-                  <h4 className="font-bold text-slate-100 group-hover:text-emerald-400 transition-colors">
-                    {item.title}
-                  </h4>
-                  <p className="text-xs font-mono text-slate-400 mt-0.5">
-                    {item.event}
-                  </p>
-                </div>
+                <h4 className="font-bold text-slate-100 text-lg mb-3">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-slate-400 leading-relaxed">
+                  {item.description}
+                </p>
               </div>
-              <span className="text-xs font-mono text-slate-500 sm:text-right mt-2 sm:mt-0">
-                {item.date}
-              </span>
-            </a>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
