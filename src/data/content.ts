@@ -273,8 +273,8 @@ export const contentData: Record<'en' | 'pt', Content> = {
       subtitle: "Open to discussing Senior/Staff Backend roles, system architectures, and cloud scaling opportunities.",
       email: "danimaribeiro@gmail.com",
       github: "https://github.com/danimaribeiro",
-      linkedin: "https://www.linkedin.com/in/danimaribeiro",
-      youtube: "https://www.youtube.com/@DanimarRibeiro",
+      linkedin: "https://www.linkedin.com/in/danimar-ribeiro-7bb75030/?locale=en-US",
+      youtube: "https://www.youtube.com/@danimaribeiro",
       copyright: "© Danimar Ribeiro. Engineered with Tailwind v4, React & zero overhead."
     }
   },
@@ -474,8 +474,8 @@ export const contentData: Record<'en' | 'pt', Content> = {
       subtitle: "Aberto para discutir vagas de Senior/Staff Backend, arquitetura de sistemas globais e escalabilidade.",
       email: "danimaribeiro@gmail.com",
       github: "https://github.com/danimaribeiro",
-      linkedin: "https://www.linkedin.com/in/danimaribeiro",
-      youtube: "https://www.youtube.com/@DanimarRibeiro",
+      linkedin: "https://www.linkedin.com/in/danimar-ribeiro-7bb75030/",
+      youtube: "https://www.youtube.com/@danimaribeiro",
       copyright: "© Danimar Ribeiro. Desenvolvido com Tailwind CSS v4, React e zero overhead."
     }
   }
