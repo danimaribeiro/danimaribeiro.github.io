@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-ui: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-code: "JetBrains Mono", monospace;
+  
+  --color-bg-primary: #090a0f;
+  --color-bg-card: #151824;
+  --color-bg-card-hover: #1c2030;
+  
+  --color-accent-primary: #10b981;
+  --color-accent-secondary: #8b5cf6;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-primary);
+    color: #f0f2f8;
+    font-family: var(--font-ui);
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Cyberpunk radial glow atmosphere in dark mode */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100vh;
+    background: 
+      radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 45%),
+      radial-gradient(circle at 85% 70%, rgba(139, 92, 246, 0.06) 0%, transparent 45%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Dedicated styles for crisp A4 PDF resume export */
+  @media print {
+    body {
+      background-color: #ffffff !important;
+      color: #111827 !important;
+      overflow: visible !important;
+    }
+    body::before {
+      display: none !important;
+    }
+    .no-print {
+      display: none !important;
+    }
+    .print-container {
+      width: 100% !important;
+      max-width: 210mm !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+    @page {
+      size: A4;
+      margin: 12mm 15mm;
+    }
+  }
+}
