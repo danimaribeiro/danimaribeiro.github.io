@@ -90,11 +90,11 @@ export const contentData: Record<'en' | 'pt', Content> = {
     hero: {
       badge: "⚡ Senior / Staff Backend Engineer (10+ Years)",
       title: "Hey, I'm Danimar Ribeiro",
-      role: "Senior Backend Engineer specializing in Python, Go (GoLang), Cloud Architecture (AWS), and Enterprise Systems.",
+      role: "Senior Backend Engineer specializing in Python, Cloud Architecture (AWS), and Enterprise Systems.",
       location: "📍 Based in Florianópolis, Brazil — Available for Global Remote Roles (US/EU).",
       description: [
-        "With over a decade of software engineering experience, I specialize in architecting distributed systems, automating mission-critical business workflows, and solving extreme performance bottlenecks.",
-        "At AdRoll, I redesigned core email marketing delivery services, leveraging GoLang's concurrency to boost throughput by 60x (from 5 to 300 emails per second). Prior to that, I left my Physics degree to lead the architectural development of Odoo ERP localization for the Brazilian market at Trust-Code, powering tax compliance for thousands of businesses."
+        "With over a decade of software engineering experience, I specialize in architecting distributed backend systems, automating mission-critical business workflows, and solving extreme performance bottlenecks.",
+        "At AdRoll, I redesigned core email marketing delivery services in Python, boosting throughput from 5 to 300 emails per second. Prior to that, I left my Physics degree to Co-Found Trustcode, serving as CTO to scale the company to 50+ enterprise clients and leading the architectural development of Odoo ERP localization for Brazil. Currently, I am open to new opportunities while actively researching and building database internals in Rust and Zig."
       ],
       ctaCollaborate: "Get in Touch",
       ctaResume: "View Complete CV & Skills",
@@ -106,7 +106,7 @@ export const contentData: Record<'en' | 'pt', Content> = {
         {
           title: "Odoo Brasil & Trust-Code Ecosystem",
           subtitle: "Enterprise Brazilian Fiscal & Financial Modules",
-          description: "Former Head of Development & lead architect for core Brazilian localization modules in Odoo ERP (NF-e, NFS-e, CT-e, SPED, banking automation, and PyTrustNFe). Powering compliance for thousands of organizations.",
+          description: "Co-Founder and CTO leading the architectural development of core Brazilian localization modules in Odoo ERP (NF-e, NFS-e, CT-e, SPED, banking automation, and PyTrustNFe). Powering compliance for thousands of organizations.",
           tags: ["Python", "Odoo ERP", "Distributed Architecture", "PostgreSQL", "Docker"],
           githubUrl: "https://github.com/Trust-Code",
           demoUrl: "https://github.com/danimaribeiro/PyTrustNFe",
@@ -146,19 +146,19 @@ export const contentData: Record<'en' | 'pt', Content> = {
     },
     resumePage: {
       title: "Danimar Ribeiro",
-      subtitle: "Senior Backend Engineer | Python • Go • AWS Cloud • Distributed Systems & ERP Architecture",
+      subtitle: "Senior Backend Engineer | Python • AWS Cloud • Distributed Systems & ERP Architecture",
       downloadText: "Download Resume (.PDF)",
       pdfName: "resume-en.pdf",
-      placeholderNotice: "Executive Profile: 10+ years in backend software engineering across global cloud environments (AWS ECS, Postgres) and highly concurrent data processing (Go, Python). Strong foundation in analytical problem-solving with 3 years of academic Physics.",
+      placeholderNotice: "Executive Profile: 10+ years in backend software engineering across global cloud environments (AWS ECS, Postgres) and highly concurrent data processing. Former CTO & Co-Founder scaling enterprise ERP systems to 50+ B2B clients. Strong foundation in analytical problem-solving with 3 years of academic Physics.",
       skillsTitle: "Core Competency Matrix",
       skills: [
         {
           category: "Languages",
-          items: ["Python", "Go (GoLang)", "C#", "JavaScript / React", "SQL"]
+          items: ["Python", "Go (GoLang)", "C#", "Rust & Zig (Systems Interest)", "SQL"]
         },
         {
           category: "Cloud, DevOps & Infrastructure",
-          items: ["AWS (ECS, EC2, Aurora RDS, DynamoDB, ElastiCache, Kinesis)", "Terraform", "Docker & Containerization", "Ansible", "CI/CD Pipelines"]
+          items: ["AWS (ECS, EC2, Aurora RDS, DynamoDB, ElastiCache, Kinesis)", "Terraform", "Docker", "Ansible", "CI/CD & Service Lifecycle Ownership"]
         },
         {
           category: "Backend Frameworks & Architectures",
@@ -172,26 +172,28 @@ export const contentData: Record<'en' | 'pt', Content> = {
       experienceTitle: "Professional Work Experience",
       experiences: [
         {
-          role: "Software Engineer (Backend)",
+          role: "Senior Software Engineer (Backend)",
           company: "AdRoll (BairesDev / Remote)",
           period: "Sep 2019 — Jun 2026",
           location: "Remote",
           highlights: [
             "Spearheaded backend Python development focused on enterprise email marketing automation, deliverability, and system performance.",
             "Engineered architectural optimizations in email dispatch infrastructure, achieving a 60x throughput increase (from 5 emails/second to ~300 emails/second).",
-            "Leveraged GoLang's high concurrency and goroutines to architect a new high-performance module, streamlining massive background data processing and real-time email campaign scheduling.",
-            "Designed resilient, cloud-native environments using AWS (ECS, EC2, Postgres), Terraform, and React for external ad network integrations."
+            "Developed a high-performance background module in Go over a 10-month period to handle massive data scheduling, while maintaining a strong core focus on Python backend engineering.",
+            "Owned the full service lifecycle within a DevOps culture, architecting, deploying, and monitoring resilient cloud-native environments using AWS (ECS, EC2, Postgres) and Terraform."
           ]
         },
         {
-          role: "Lead Software Engineer",
+          role: "Co-Founder & CTO",
           company: "Trustcode",
           period: "Aug 2015 — Sep 2019",
           location: "Brazil",
           highlights: [
-            "Led the software engineering area, developing the core Python modules for the official localization of Odoo ERP in Brazil.",
-            "Architected Python packages for automated electronic invoice transmission, tax calculations, and bank ledger integrations.",
-            "Built scalable customer portal backends, managed projects, reviewed code, and conducted technical training sessions for the software ecosystem."
+            "Co-founded the company and scaled operations to 50+ enterprise B2B clients, managing an engineering team of 8 developers within a 12-person organization.",
+            "Directed the architectural localization of Odoo ERP in Brazil, adapting the software for complex national compliance and custom client implementations.",
+            "Architected complex tax calculation engines (ICMS, IPI, PIS, COFINS) and implemented SPED fiscal reporting modules.",
+            "Created 'PyTrustNFe', a standalone Python package for automated XML generation, signing, and transmission of electronic fiscal documents (NF-e, NFS-e, CT-e, MDF-e).",
+            "Developed banking integration modules supporting CNAB 240/400 standards across multiple banks for automated reconciliation and payments."
           ]
         },
         {
@@ -251,7 +253,7 @@ export const contentData: Record<'en' | 'pt', Content> = {
         {
           degree: "Physics Studies (3 years completed)",
           institution: "Federal University",
-          year: "Left to found and lead Trustcode"
+          year: "Left to found and scale Trustcode"
         }
       ]
     },
@@ -274,11 +276,11 @@ export const contentData: Record<'en' | 'pt', Content> = {
     hero: {
       badge: "⚡ Senior / Staff Backend Engineer (+10 Anos)",
       title: "Olá, sou Danimar Ribeiro",
-      role: "Engenheiro Sênior de Backend com especialidade em Python, Go, Arquitetura Cloud (AWS) e Sistemas Corporativos.",
+      role: "Engenheiro Sênior de Backend com especialidade em Python, Arquitetura Cloud (AWS) e Sistemas Corporativos.",
       location: "📍 Baseado em Florianópolis, Brasil — Disponível para vagas remotas globais (EUA/Europa).",
       description: [
         "Com mais de uma década de experiência em engenharia de software, sou especialista em arquitetar sistemas distribuídos, automatizar fluxos críticos e resolver gargalos extremos de performance.",
-        "Na AdRoll, reconstruí os serviços core de entrega de e-mail usando alta concorrência em GoLang, elevando o throughput em 60x (de 5 para 300 envios por segundo). Antes disso, deixei minha graduação em Física para liderar a arquitetura técnica da localização fiscal do Odoo ERP no Brasil pela Trust-Code, viabilizando operações de milhares de empresas."
+        "Na AdRoll, reconstruí os serviços core de entrega de e-mail em Python, elevando o throughput de 5 para 300 envios por segundo. Antes disso, deixei a graduação em Física para Co-Fundar a Trustcode, atuando como CTO escalando a empresa para mais de 50 clientes corporativos e desenhando a arquitetura de localização do Odoo ERP no Brasil. Atualmente estou aberto a novas oportunidades enquanto construo e pesquiso arquiteturas de Bancos de Dados em Rust e Zig."
       ],
       ctaCollaborate: "Entrar em Contato",
       ctaResume: "Ver Experiência & CV",
@@ -290,7 +292,7 @@ export const contentData: Record<'en' | 'pt', Content> = {
         {
           title: "Odoo Brasil & Ecossistema Trust-Code",
           subtitle: "Módulos Corporativos para Automação Fiscal & Financeira",
-          description: "Ex-Head de Desenvolvimento e arquiteto dos principais módulos open-source da localização Odoo no Brasil (NF-e, NFS-e, CT-e, SPED, integração bancária e PyTrustNFe).",
+          description: "Co-Fundador e CTO responsável por liderar o desenvolvimento dos principais módulos open-source da localização Odoo no Brasil (NF-e, NFS-e, CT-e, SPED, integração bancária e PyTrustNFe).",
           tags: ["Python", "Odoo ERP", "Distributed Architecture", "PostgreSQL", "Docker"],
           githubUrl: "https://github.com/Trust-Code",
           demoUrl: "https://github.com/danimaribeiro/PyTrustNFe",
@@ -302,7 +304,7 @@ export const contentData: Record<'en' | 'pt', Content> = {
           description: "Projeto de pesquisa pessoal recente para estudo profundo de sistemas de baixo nível, modelando uma engine relacional (B-Trees, Lexers) do zero em C, C++, Rust e Zig.",
           tags: ["Rust", "Zig", "C++", "C", "Database Internals"],
           githubUrl: "https://github.com/danimaribeiro/droid",
-          stats: "Pesquisa & Estudo"
+          stats: "Pesquisa & Estudo Atual"
         }
       ]
     },
@@ -330,19 +332,19 @@ export const contentData: Record<'en' | 'pt', Content> = {
     },
     resumePage: {
       title: "Danimar Ribeiro",
-      subtitle: "Engenheiro Sênior de Backend | Python • Go • Nuvem AWS • Sistemas Corporativos",
+      subtitle: "Engenheiro Sênior de Backend | Python • Nuvem AWS • Sistemas Corporativos & ERP",
       downloadText: "Baixar Currículo (.PDF)",
       pdfName: "resume-pt.pdf",
-      placeholderNotice: "Perfil Executivo: +10 anos em engenharia de backend voltada para ambientes cloud globais (AWS ECS, Postgres) e processamento massivo de dados (Go, Python). Forte base em resolução analítica forjada por 3 anos de graduação em Física.",
+      placeholderNotice: "Perfil Executivo: +10 anos em engenharia de backend voltada para ambientes cloud globais (AWS ECS, Postgres) e alta escalabilidade. Ex-CTO e Co-Fundador que escalou ERPs para +50 clientes corporativos. Forte base analítica forjada por 3 anos de graduação em Física.",
       skillsTitle: "Matriz de Competências",
       skills: [
         {
           category: "Linguagens",
-          items: ["Python", "Go (GoLang)", "C#", "JavaScript / React", "SQL"]
+          items: ["Python", "Go (GoLang)", "C#", "Rust & Zig (Interesse em Sistemas)", "SQL"]
         },
         {
           category: "Nuvem, Infraestrutura & DevOps",
-          items: ["AWS (ECS, EC2, Aurora RDS, DynamoDB, ElastiCache, Kinesis)", "Terraform", "Docker", "Ansible", "Pipelines de CI/CD"]
+          items: ["AWS (ECS, EC2, Aurora RDS, DynamoDB, ElastiCache, Kinesis)", "Terraform", "Docker", "Ansible", "DevOps Lifecycle"]
         },
         {
           category: "Frameworks Backend & Arquiteturas",
@@ -356,26 +358,28 @@ export const contentData: Record<'en' | 'pt', Content> = {
       experienceTitle: "Experiência Profissional",
       experiences: [
         {
-          role: "Engenheiro de Software (Backend)",
+          role: "Engenheiro Sênior de Software (Backend)",
           company: "AdRoll (BairesDev / Remoto)",
           period: "Set 2019 — Jun 2026",
           location: "Remoto",
           highlights: [
-            "Liderança no desenvolvimento backend em Python focado na automação de e-mails, entregabilidade e performance extrema do sistema.",
+            "Liderança no desenvolvimento backend em Python focado na automação de e-mails corporativos, entregabilidade e performance extrema do sistema.",
             "Redesenho da infraestrutura de disparo, elevando o throughput de envio em 60x — saltando de 5 e-mails/segundo para ~300 e-mails/segundo.",
-            "Tirei proveito da altíssima capacidade de concorrência e goroutines da linguagem Go para criar um novo módulo, otimizando o processamento em massa de dados em background e agendamento de campanhas.",
-            "Gestão de ambientes cloud-native resilientes na AWS (ECS, EC2, Postgres), IaC com Terraform e interfaces via React."
+            "Desenvolvi um módulo de alta performance em Go durante 10 meses para otimizar agendamentos massivos em background, mantendo o foco central na engenharia backend em Python.",
+            "Atuação ponta-a-ponta no ciclo de vida do serviço (cultura DevOps), sendo responsável pela arquitetura, deploy e monitoramento de ambientes cloud na AWS (ECS, EC2, Postgres) utilizando Terraform."
           ]
         },
         {
-          role: "Engenheiro Líder de Software",
+          role: "Co-Fundador & CTO",
           company: "Trustcode",
           period: "Ago 2015 — Set 2019",
           location: "Brasil",
           highlights: [
-            "Liderei a área de desenvolvimento, desenhando os módulos Python core para a localização oficial do Odoo ERP no Brasil.",
-            "Arquitetei pacotes para transmissão automatizada de documentos fiscais eletrônicos (NF-e/NFS-e), cálculo de impostos e integração de conciliações bancárias.",
-            "Construção de portais de cliente, gerenciamento de projetos, revisões de código e condução de treinamentos técnicos para o ecossistema."
+            "Co-fundei a empresa e escalei a operação técnica e comercial para mais de 50 clientes corporativos B2B, gerenciando uma equipe de 12 funcionários (sendo 8 desenvolvedores).",
+            "Direcionei a arquitetura oficial de localização do Odoo ERP no Brasil, adaptando o software para as exigências fiscais e customizações complexas de clientes.",
+            "Arquitetei motores complexos de cálculo de impostos brasileiros (ICMS, IPI, PIS, COFINS) e relatórios fiscais do SPED (EFD, ECD).",
+            "Criei o 'PyTrustNFe', um pacote Python open-source focado na assinatura e transmissão automatizada de documentos fiscais eletrônicos (NF-e, NFS-e, CT-e, MDF-e).",
+            "Desenvolvi módulos avançados de integração bancária (padrão CNAB 240/400) para múltiplos bancos, automatizando conciliações e pagamentos."
           ]
         },
         {
