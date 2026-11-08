@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monge Docs Privacy Policy</title>
+<meta name="description" content="What the Monge Docs Chrome extension stores, what it sends, and to whom.">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="../icon.png" alt="">
+    <a href="../">Monge Docs</a>
+    <nav><a href="./">Privacy</a></nav>
+  </header>
+
+  <h1>Privacy policy</h1>
+  <p class="meta">Last updated 8 November 2026</p>
+
+  <p>Monge Docs is a Chrome extension that records your actions on a web page and turns them into a written guide. This policy explains what data it handles, where that data goes, and how to remove it. Monge Docs is made and run by Danimar Ribeiro. Contact: <a href="mailto:danimaribeiro@gmail.com">danimaribeiro@gmail.com</a>.</p>
+
+  <h2>In short</h2>
+  <ul>
+    <li>Recordings, screenshots, and guides are stored in your browser. They leave it only when you use an AI feature or create a video.</li>
+    <li>We do not sell your data, use it for advertising, or use it to train AI models.</li>
+    <li>Anonymous usage statistics help us fix the product. You can turn them off in Settings.</li>
+  </ul>
+
+  <h2>Data stored on your computer</h2>
+  <p>While you record, the extension captures the actions you take on the page you are recording: clicks, text you type, selections, page changes, and a screenshot for each step. Typed values in password fields and in fields that look like secrets (one-time codes, card numbers, PINs, tokens) are replaced with a mask. Screenshots show whatever is visible on the page, so blur anything sensitive in the editor before you share or generate. It only records the tab where you started recording, and only while recording is on.</p>
+  <p>Recordings, screenshots, generated guides, your settings, and any API keys you enter are stored in your browser's local extension storage. They are not sent to us. Uninstalling the extension, or using "Delete All Data" in Settings, removes them.</p>
+
+  <h2>Data sent when you use AI features</h2>
+  <p>When you generate a guide, enhance text, or create narration, the extension sends the recorded steps (the action, the text of the element, the page title) and cropped screenshots of the steps to an AI model. Where it goes depends on your setting:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Setting</th><th>Where the data goes</th><th>What we keep</th></tr></thead>
+    <tbody>
+      <tr><td>Your own Gemini or OpenAI key</td><td>Directly from your browser to Google or OpenAI. It does not pass through our servers.</td><td>Nothing.</td></tr>
+      <tr><td>Monge Docs hosted AI (requires an account)</td><td>To our server, which forwards it to Google Gemini or OpenAI and returns the result.</td><td>Not the content. We record the model used, the number of tokens, and the cost, to apply your plan's limits.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Google and OpenAI handle this data under their own API terms. Under those terms, paid API data is not used to train their models.</p>
+
+  <h2>Data sent when you create a video</h2>
+  <p>Video rendering happens on our server. The extension uploads the screenshots, the narration text, and the generated audio for that video. We keep the input and the finished video so you can download it, and delete both when you ask us to.</p>
+
+  <h2>Your account</h2>
+  <p>You need an account only for hosted AI and video. For an account we store:</p>
+  <ul>
+    <li>Your email address and name, and a hashed password, or your Google account ID if you sign in with Google (we ask Google only for your email and basic profile).</li>
+    <li>Your plan, credit balance, and usage history.</li>
+    <li>For payments: the subscription and payment status that Stripe reports to us. Card details are entered on Stripe's page and never reach us.</li>
+  </ul>
+  <p>We use your email only for account messages: verification codes, password resets, and notices that a video is ready. These are sent through Brevo (Sendinblue).</p>
+  <p>The sign-in, registration, and password reset forms use Cloudflare Turnstile to block bots. Turnstile processes your IP address and browser signals, and does not set advertising cookies.</p>
+
+  <h2>Usage statistics and error reports</h2>
+  <p>The extension sends us usage events such as "recording started", "guide generated", or "exported as ZIP", along with small values like the number of steps, the export format, or how long generation took. Error reports include the stage that failed and the error message, with any web address removed.</p>
+  <p>Each event carries a random ID created when you install the extension, the extension version, and your browser language. If you are signed in, it is also linked to your account. Events never include page content, web addresses, typed text, or screenshots. They are stored on our own server and are not shared with any analytics company.</p>
+  <p>You can turn this off in Settings &rarr; Privacy &rarr; "Share anonymous usage statistics". Turning it off also deletes events that have not been sent yet.</p>
+
+  <h2>Permissions the extension asks for</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td><code>activeTab</code>, <code>scripting</code></td><td>To record the tab you start recording in, after you click the extension icon.</td></tr>
+      <tr><td><code>storage</code>, <code>unlimitedStorage</code></td><td>To keep recordings and screenshots on your computer.</td></tr>
+      <tr><td><code>sidePanel</code></td><td>To show the recording controls.</td></tr>
+      <tr><td><code>identity</code></td><td>For "Sign in with Google".</td></tr>
+      <tr><td><code>alarms</code></td><td>To send usage statistics in batches.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Who processes data for us</h2>
+  <ul>
+    <li><b>Google (Gemini API)</b> and <b>OpenAI</b>: AI generation, when you use the hosted plan.</li>
+    <li><b>Stripe</b>: payments.</li>
+    <li><b>Brevo</b>: account emails.</li>
+    <li><b>Cloudflare</b>: bot protection and network delivery for our API.</li>
+  </ul>
+  <p>We do not share your data with anyone else, except where the law requires it.</p>
+
+  <h2>Keeping and deleting your data</h2>
+  <p>Data in your browser is under your control: delete a project, use "Delete All Data", or uninstall the extension. Account data is kept while your account exists. To delete your account and everything we hold about it, or to get a copy of it, email <a href="mailto:danimaribeiro@gmail.com">danimaribeiro@gmail.com</a> from the address on the account. We do it within 30 days. You have these rights under the GDPR and Brazil's LGPD.</p>
+
+  <h2>Children</h2>
+  <p>Monge Docs is not meant for children under 13, and we do not knowingly collect their data.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, we update this page and the date at the top. If a change affects what is sent or to whom, the extension's release notes will say so too.</p>
+
+  <footer><a href="../">Monge Docs</a> &middot; <a href="mailto:danimaribeiro@gmail.com">danimaribeiro@gmail.com</a></footer>
+</div>
+</body>
+</html>
