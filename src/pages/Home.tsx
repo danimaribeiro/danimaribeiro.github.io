@@ -146,7 +146,7 @@ export const Home: React.FC<HomeProps> = ({ content, onNavigateToResume }) => {
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-emerald-400 transition-colors"
                   >
                     <ExternalLink size={15} />
-                    <span>Live / Ecosystem</span>
+                    <span>{proj.demoLabel ?? "Live / Ecosystem"}</span>
                   </a>
                 )}
               </div>

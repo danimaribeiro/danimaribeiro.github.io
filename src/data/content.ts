@@ -5,6 +5,8 @@ export interface Project {
   tags: string[];
   githubUrl?: string;
   demoUrl?: string;
+  // The demo link's text, when "Live / Ecosystem" would not say where it goes.
+  demoLabel?: string;
   stats?: string;
 }
 
@@ -114,6 +116,8 @@ export const contentData: Record<'en' | 'pt', Content> = {
           description: "A current personal exploration and educational side-project modeling a relational database engine from scratch to deepen my understanding of low-level systems (C, C++, Rust, Zig).",
           tags: ["Rust", "Zig", "C++", "C", "Database Internals", "B-Tree Storage"],
           githubUrl: "https://github.com/danimaribeiro/droid",
+          demoUrl: "https://droid.danimar.dev/",
+          demoLabel: "droid: build a database from scratch",
           stats: "Current R&D Focus"
         },
         {
@@ -315,6 +319,8 @@ export const contentData: Record<'en' | 'pt', Content> = {
           description: "Projeto de pesquisa pessoal recente para estudo profundo de sistemas de baixo nível, modelando uma engine relacional (B-Trees, Lexers) do zero em C, C++, Rust e Zig.",
           tags: ["Rust", "Zig", "C++", "C", "Database Internals"],
           githubUrl: "https://github.com/danimaribeiro/droid",
+          demoUrl: "https://droid.danimar.dev/",
+          demoLabel: "droid: construa um banco de dados do zero",
           stats: "Pesquisa & Estudo Atual"
         },
         {
