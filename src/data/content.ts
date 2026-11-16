@@ -112,13 +112,12 @@ export const contentData: Record<'en' | 'pt', Content> = {
         },
         {
           title: "Droid",
-          subtitle: "Database Internals Multi-Language Playground",
-          description: "A current personal exploration and educational side-project modeling a relational database engine from scratch to deepen my understanding of low-level systems (C, C++, Rust, Zig).",
+          subtitle: "Build a database engine from scratch, one tested stage at a time",
+          description: "A hands-on tutorial that takes you from a REPL to B+Trees, transactions, a query optimizer, joins, MVCC and a PostgreSQL-compatible server. Each stage has an automatic test suite; write it in C, C++, Rust or Zig.",
           tags: ["Rust", "Zig", "C++", "C", "Database Internals", "B-Tree Storage"],
-          githubUrl: "https://github.com/danimaribeiro/droid",
           demoUrl: "https://droid.danimar.dev/",
           demoLabel: "droid: build a database from scratch",
-          stats: "Current R&D Focus"
+          stats: "94 stages • Live"
         },
         {
           title: "Willy Finance",
@@ -315,13 +314,12 @@ export const contentData: Record<'en' | 'pt', Content> = {
         },
         {
           title: "Droid",
-          subtitle: "Playground Educacional de Bancos de Dados",
-          description: "Projeto de pesquisa pessoal recente para estudo profundo de sistemas de baixo nível, modelando uma engine relacional (B-Trees, Lexers) do zero em C, C++, Rust e Zig.",
+          subtitle: "Construa um banco de dados do zero, uma etapa testada por vez",
+          description: "Um tutorial prático que vai de um REPL a B+Trees, transações, otimizador de consultas, joins, MVCC e um servidor compatível com PostgreSQL. Cada etapa tem uma suíte de testes automática; escreva em C, C++, Rust ou Zig.",
           tags: ["Rust", "Zig", "C++", "C", "Database Internals"],
-          githubUrl: "https://github.com/danimaribeiro/droid",
           demoUrl: "https://droid.danimar.dev/",
           demoLabel: "droid: construa um banco de dados do zero",
-          stats: "Pesquisa & Estudo Atual"
+          stats: "94 etapas • No ar"
         },
         {
           title: "Willy Finance",

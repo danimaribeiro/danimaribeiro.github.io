@@ -7,6 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "build:pdf": "vite build && node scripts/generate-pdf.mjs",
+    "build:site": "vite build && node scripts/prerender.mjs",
+    "prerender": "node scripts/prerender.mjs",
+    "og-image": "node scripts/generate-og.mjs",
     "preview": "vite preview -p 4173",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },

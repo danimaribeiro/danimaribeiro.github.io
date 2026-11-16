@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://danimar.dev/sitemap.xml
+Sitemap: https://droid.danimar.dev/sitemap.xml
