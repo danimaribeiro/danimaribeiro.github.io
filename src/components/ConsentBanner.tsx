@@ -4,26 +4,26 @@ import { saveChoice, start, storedChoice, type Choice } from '../analytics';
 
 const text = {
   en: {
-    body: 'May I use Google Analytics to count visits? It sets cookies, and nothing loads unless you accept.',
-    accept: 'Accept',
-    decline: 'No, thanks',
+    body: 'This site uses Google Analytics cookies to count visits.',
+    accept: 'OK',
+    reject: 'Reject',
   },
   pt: {
-    body: 'Posso usar o Google Analytics para contar as visitas? Ele usa cookies, e nada é carregado se você não aceitar.',
-    accept: 'Aceitar',
-    decline: 'Não, obrigado',
+    body: 'Este site usa cookies do Google Analytics para contar as visitas.',
+    accept: 'OK',
+    reject: 'Recusar',
   },
 };
 
+// Starts Analytics (unless rejected before) and asks once per browser.
 // Rendered into <body>, outside #root, so the pre-rendered home page never
 // contains it: readers without JavaScript see no buttons that cannot work.
 export const ConsentBanner: React.FC<{ lang: 'en' | 'pt' }> = ({ lang }) => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const choice = storedChoice();
-    if (choice === 'granted') start();
-    else if (choice === null) setOpen(true);
+    start();
+    if (storedChoice() === null) setOpen(true);
   }, []);
 
   if (!open) return null;
@@ -46,7 +46,7 @@ export const ConsentBanner: React.FC<{ lang: 'en' | 'pt' }> = ({ lang }) => {
           onClick={() => choose('denied')}
           className="px-3 py-1.5 rounded-lg border border-slate-700 text-slate-300 hover:border-slate-500 hover:text-slate-100 transition-colors cursor-pointer"
         >
-          {t.decline}
+          {t.reject}
         </button>
         <button
           onClick={() => choose('granted')}
