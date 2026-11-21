@@ -1,0 +1,11 @@
+{
+  "title": "How to Create a New Project in Acme Projects",
+  "description": "Learn how to create a new project in Acme Projects, name it and assign an owner in four quick steps.",
+  "language": "en",
+  "steps": 4,
+  "goal": "Create a new project in Acme Projects and assign an owner to it.",
+  "model": "agent-written from the extension's own request (no hosted model)",
+  "clipSeconds": 19.5,
+  "extensionVersion": "1.0.4",
+  "dryRun": false
+}

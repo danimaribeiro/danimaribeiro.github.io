@@ -89,7 +89,7 @@ function loadGuide(locale) {
           return '';
         }
         const { width, height } = pngSize(file);
-        const src = versioned(file, `${facts.base}/media/${md.code}/guide/${href}`);
+        const src = versioned(file, `${facts.base}/media/${md.code}/guide/${path.posix.normalize(href)}`);
         return `<img src="${src}" width="${width}" height="${height}" alt="${alt.replace(/"/g, '&quot;')}" loading="lazy">`;
       },
     },

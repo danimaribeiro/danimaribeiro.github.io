@@ -1,0 +1,11 @@
+{
+  "title": "Cómo crear un nuevo proyecto en Proyectos Acme",
+  "description": "Aprende a crear un nuevo proyecto en Proyectos Acme, ponerle nombre y asignarle un responsable en cuatro pasos rápidos.",
+  "language": "es",
+  "steps": 4,
+  "goal": "Crear un nuevo proyecto en Proyectos Acme y asignarle un responsable.",
+  "model": "agent-written from the extension's own request (no hosted model)",
+  "clipSeconds": 19.4,
+  "extensionVersion": "1.0.4",
+  "dryRun": false
+}
