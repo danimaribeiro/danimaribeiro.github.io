@@ -5,6 +5,8 @@ import { Resume } from './pages/Resume';
 import { PrintResume } from './pages/PrintResume';
 import { PhysicsEasterEgg } from './components/PhysicsEasterEgg';
 import { contentData } from './data/content';
+import { ConsentBanner } from './components/ConsentBanner';
+import { trackView } from './analytics';
 
 export const App: React.FC = () => {
   const [lang, setLang] = useState<'en' | 'pt'>('en');
@@ -25,6 +27,16 @@ export const App: React.FC = () => {
     return () => window.removeEventListener('hashchange', checkHash);
   }, []);
 
+  // The first page view is sent by gtag itself on load; only later switches are sent here.
+  const firstView = React.useRef(true);
+  useEffect(() => {
+    if (firstView.current) {
+      firstView.current = false;
+      return;
+    }
+    trackView(currentView, currentView === 'home' ? 'Home' : 'Resume');
+  }, [currentView]);
+
   if (printMode) {
     return <PrintResume content={contentData[printMode]} />;
   }
@@ -38,6 +50,7 @@ export const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#090a0f] text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950 overflow-x-hidden">
       <PhysicsEasterEgg />
+      <ConsentBanner lang={lang} />
       <Navbar
         currentView={currentView}
         onNavigate={(view) => {
