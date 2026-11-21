@@ -60,6 +60,8 @@ try {
   // opacity 0), so when React mounts over the snapshot it starts from the same
   // frame and the animation plays once, without a visible -> hidden -> fade-in blink.
   await page.evaluateOnNewDocument(() => {
+    // Keeps Google Analytics off (src/analytics.ts), so a deploy is not a visit.
+    window.__prerender = true;
     const observer = new MutationObserver(() => {
       const root = document.getElementById('root');
       if (!root || !root.querySelector('h1')) return;
