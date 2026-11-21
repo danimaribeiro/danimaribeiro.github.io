@@ -1,6 +1,6 @@
 /* Monge Docs product pages (landing and comparison). The privacy policy keeps
-   ../style.css; the colours here are the same ones, and the same as the shared
-   guide page the extension publishes. */
+   ../style.css, with the same colours. They come from the logo (brand/logo.svg in
+   monge-docs): the green of Brother Monge's robe, his ink, and the pink ring. */
 
 @font-face {
   font-family: "Bricolage Grotesque";
@@ -18,18 +18,18 @@
 }
 
 :root {
-  --paper: #fafafc;
+  --paper: #fafbf8;
   --surface: #ffffff;
-  --ink: #1b1a2e;
-  --muted: #5f5e75;
-  --line: #e3e2ec;
-  --soft: #f1f0f7;
-  --violet: #5b3fd6;
-  --on-violet: #ffffff;
+  --ink: #1e2a22;
+  --muted: #5a675e;
+  --line: #dfe5dc;
+  --soft: #edf2ea;
+  --brand: #2f4a3a;
+  --on-brand: #ffffff;
   /* The pink of the logo. Used for one thing only: the mark of a click. */
   --click: #e0277f;
   --click-halo: rgba(224, 39, 127, 0.16);
-  --shadow: 0 1px 2px rgba(27, 26, 46, 0.06), 0 18px 40px -18px rgba(91, 63, 214, 0.35);
+  --shadow: 0 1px 2px rgba(30, 42, 34, 0.06), 0 18px 40px -18px rgba(47, 74, 58, 0.35);
 
   --display: "Bricolage Grotesque", "Atkinson Hyperlegible Next", system-ui, sans-serif;
   --text: "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -40,14 +40,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #131221;
-    --surface: #1b1a2e;
-    --ink: #ecebf5;
-    --muted: #a3a2b8;
-    --line: #2e2d42;
-    --soft: #232238;
-    --violet: #a48cff;
-    --on-violet: #131221;
+    --paper: #111813;
+    --surface: #18221b;
+    --ink: #e8eee8;
+    --muted: #a0aea4;
+    --line: #2a372e;
+    --soft: #1e2a22;
+    --brand: #9cc8a9;
+    --on-brand: #111813;
     --click: #ff6aa9;
     --click-halo: rgba(255, 106, 169, 0.2);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 18px 40px -18px rgba(0, 0, 0, 0.8);
@@ -65,9 +65,9 @@ body {
   padding: 0 20px;
 }
 img, video { max-width: 100%; height: auto; display: block; }
-a { color: var(--violet); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a { color: var(--brand); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; border-radius: 4px; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
 p { margin: 0 0 1em; max-width: var(--measure); }
 ul, ol { margin: 0; padding: 0; }
 h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
@@ -91,7 +91,7 @@ h3 { font-size: 23px; line-height: 1.2; }
 .langs a[aria-current] { color: var(--ink); font-weight: 600; }
 
 .btn {
-  display: inline-block; background: var(--violet); color: var(--on-violet);
+  display: inline-block; background: var(--brand); color: var(--on-brand);
   font: 600 18px/1 var(--text); padding: 16px 26px; border-radius: 10px; text-decoration: none;
 }
 .btn:hover { filter: brightness(1.08); }
