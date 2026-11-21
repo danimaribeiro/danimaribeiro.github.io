@@ -15,10 +15,11 @@ export const facts = {
     freeShareLinks: 3, // FreeShareLimit in backend/internal/guides/model.go
   },
 
-  // The repository is still private (monge-docs#175). The pages make no
-  // open-source claim until this is true and `url` opens for a logged-out visitor.
+  // The pages are written for the product as the growth plan finishes it: the repository
+  // public under AGPL-3.0 (monge-docs#175). Publish them only once `url` opens for a
+  // logged-out visitor, or set `live` to false to leave every open-source claim out.
   openSource: {
-    live: false,
+    live: true,
     licence: 'AGPL-3.0',
     url: 'https://github.com/danimaribeiro/monge-docs',
   },

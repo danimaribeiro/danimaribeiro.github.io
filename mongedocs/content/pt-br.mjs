@@ -67,7 +67,7 @@ export default (f) => {
       ],
 
       guideTitle: 'Um guia que ele fez',
-      guideIntro: 'Este é o guia da gravação acima, exatamente como o Monge Docs escreveu. Nada foi editado depois.',
+      guideIntro: 'Este é o guia da gravação acima, como o Monge Docs escreveu. Nada foi editado depois.',
       guideShared: 'Abrir como página compartilhada',
 
       localTitle: 'Suas gravações ficam no seu navegador',
@@ -128,7 +128,7 @@ export default (f) => {
     compare: {
       scribe: {
         name: scribe.name,
-        title: 'Monge Docs ou Scribe: exportação grátis, gravações no seu navegador',
+        title: open ? 'Monge Docs ou Scribe: uma alternativa de código aberto, com exportação grátis' : 'Monge Docs ou Scribe: exportação grátis, gravações no seu navegador',
         description: `Como o Monge Docs se compara ao Scribe para criar guias passo a passo: preço, exportação grátis, onde as gravações ficam, edição de capturas de tela e idiomas. Preços do Scribe conferidos em ${checkedOn('scribe', 'pt-BR')}.`,
         h1: 'Monge Docs ou Scribe',
         lede: 'Os dois gravam o que você faz no navegador e transformam em um guia passo a passo com capturas de tela. O Scribe é o produto maior, feito para equipes e empresas. O Monge Docs é uma extensão pequena para quem quer o guia em um arquivo que fica com você.',
@@ -162,7 +162,7 @@ export default (f) => {
 
       tango: {
         name: tango.name,
-        title: 'Monge Docs ou Tango: guias ilimitados e exportação grátis',
+        title: open ? 'Monge Docs ou Tango: uma alternativa de código aberto, com guias ilimitados' : 'Monge Docs ou Tango: guias ilimitados e exportação grátis',
         description: `Como o Monge Docs se compara ao Tango para criar guias passo a passo: preço, limites do plano grátis, exportação, onde as gravações ficam e idiomas. Preços do Tango conferidos em ${checkedOn('tango', 'pt-BR')}.`,
         h1: 'Monge Docs ou Tango',
         lede: 'Os dois gravam o que você faz no navegador e transformam em um guia passo a passo com capturas de tela. O Tango é feito para equipes, com orientação na própria tela além dos guias. O Monge Docs é uma extensão pequena para quem quer o guia em um arquivo que fica com você.',

@@ -68,7 +68,7 @@ export default (f) => {
       ],
 
       guideTitle: 'A guide it made',
-      guideIntro: 'This is the guide from the recording above, exactly as Monge Docs wrote it. Nothing was edited afterwards.',
+      guideIntro: 'This is the guide from the recording above, as Monge Docs wrote it. Nothing was edited afterwards.',
       guideShared: 'Open it as a shared page',
 
       localTitle: 'Your recordings stay in your browser',
@@ -129,7 +129,7 @@ export default (f) => {
     compare: {
       scribe: {
         name: scribe.name,
-        title: 'Monge Docs vs Scribe: free export, recordings kept in your browser',
+        title: open ? 'Monge Docs vs Scribe: an open-source alternative with free export' : 'Monge Docs vs Scribe: free export, recordings kept in your browser',
         description: `How Monge Docs compares with Scribe for step-by-step guides: price, free export, where recordings are stored, screenshot editing, and languages. Scribe's prices checked on ${checkedOn('scribe', 'en-GB')}.`,
         h1: 'Monge Docs vs Scribe',
         lede: 'Both record what you do in the browser and turn it into a step-by-step guide with screenshots. Scribe is the larger product, built for teams and companies. Monge Docs is a small extension for people who want the guide as a file they keep.',
@@ -163,7 +163,7 @@ export default (f) => {
 
       tango: {
         name: tango.name,
-        title: 'Monge Docs vs Tango: unlimited guides and free export',
+        title: open ? 'Monge Docs vs Tango: an open-source alternative with unlimited guides' : 'Monge Docs vs Tango: unlimited guides and free export',
         description: `How Monge Docs compares with Tango for step-by-step guides: price, free plan limits, export, where recordings are stored, and languages. Tango's prices checked on ${checkedOn('tango', 'en-GB')}.`,
         h1: 'Monge Docs vs Tango',
         lede: 'Both record what you do in the browser and turn it into a step-by-step guide with screenshots. Tango is built for teams, with on-screen guidance on top of the guides. Monge Docs is a small extension for people who want the guide as a file they keep.',

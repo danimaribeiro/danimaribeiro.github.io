@@ -67,7 +67,7 @@ export default (f) => {
       ],
 
       guideTitle: 'Una guía que hizo',
-      guideIntro: 'Esta es la guía de la grabación de arriba, tal como la escribió Monge Docs. No se editó nada después.',
+      guideIntro: 'Esta es la guía de la grabación de arriba, como la escribió Monge Docs. No se editó nada después.',
       guideShared: 'Abrirla como página compartida',
 
       localTitle: 'Tus grabaciones se quedan en tu navegador',
@@ -128,7 +128,7 @@ export default (f) => {
     compare: {
       scribe: {
         name: scribe.name,
-        title: 'Monge Docs o Scribe: exportación gratis, grabaciones en tu navegador',
+        title: open ? 'Monge Docs o Scribe: una alternativa de código abierto, con exportación gratis' : 'Monge Docs o Scribe: exportación gratis, grabaciones en tu navegador',
         description: `Cómo se compara Monge Docs con Scribe para crear guías paso a paso: precio, exportación gratis, dónde se guardan las grabaciones, edición de capturas de pantalla e idiomas. Precios de Scribe comprobados el ${checkedOn('scribe', 'es')}.`,
         h1: 'Monge Docs o Scribe',
         lede: 'Los dos graban lo que haces en el navegador y lo convierten en una guía paso a paso con capturas de pantalla. Scribe es el producto más grande, pensado para equipos y empresas. Monge Docs es una extensión pequeña para quien quiere la guía en un archivo que se queda contigo.',
@@ -162,7 +162,7 @@ export default (f) => {
 
       tango: {
         name: tango.name,
-        title: 'Monge Docs o Tango: guías ilimitadas y exportación gratis',
+        title: open ? 'Monge Docs o Tango: una alternativa de código abierto, con guías ilimitadas' : 'Monge Docs o Tango: guías ilimitadas y exportación gratis',
         description: `Cómo se compara Monge Docs con Tango para crear guías paso a paso: precio, límites del plan gratis, exportación, dónde se guardan las grabaciones e idiomas. Precios de Tango comprobados el ${checkedOn('tango', 'es')}.`,
         h1: 'Monge Docs o Tango',
         lede: 'Los dos graban lo que haces en el navegador y lo convierten en una guía paso a paso con capturas de pantalla. Tango está pensado para equipos, con orientación en la propia pantalla además de las guías. Monge Docs es una extensión pequeña para quien quiere la guía en un archivo que se queda contigo.',
