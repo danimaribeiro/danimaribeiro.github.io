@@ -19,7 +19,7 @@ export const facts = {
   // public under AGPL-3.0 (monge-docs#175). Publish them only once `url` opens for a
   // logged-out visitor, or set `live` to false to leave every open-source claim out.
   openSource: {
-    live: true,
+    live: false,
     licence: 'AGPL-3.0',
     url: 'https://github.com/danimaribeiro/monge-docs',
   },
