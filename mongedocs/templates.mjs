@@ -72,7 +72,84 @@ function footer({ locale, t, extra = '' }) {
   <p>${t.footer.made} ${fill(t.footer.contact, { email: facts.email })}</p>
   <p class="links"><a href="${pagePath(locale)}">${t.footer.home}</a> <a href="${facts.base}/privacy/">${t.footer.privacy}</a></p>
   ${extra}
-</footer>`;
+</footer>
+${tracking(t)}`;
+}
+
+// Google Analytics, the same property and the same choice as the rest of danimar.dev
+// (src/analytics.ts): it loads unless the visitor rejected it in the banner. A click on
+// any store link is sent as `install_click`, the conversion ads are measured by, and a
+// visit's utm_* tags (from an ad) replace the page's own on the store links, so the
+// store's own report can tell the ad apart. The page that was clicked moves to
+// utm_content.
+function tracking(t) {
+  const c = t.consent;
+  return `<div class="consent" role="region" aria-label="${esc(c.label)}" hidden>
+  <p>${c.body}</p>
+  <p class="consent-buttons"><button type="button" class="btn-quiet" data-choice="denied">${c.reject}</button><button type="button" class="btn btn-small" data-choice="granted">${c.accept}</button></p>
+</div>
+<script>
+(function () {
+  var ID = '${facts.analyticsId}', KEY = 'analytics-consent', TAGS = 'mongedocs-utm';
+  var choice = null;
+  try { choice = localStorage.getItem(KEY); } catch (e) {}
+
+  var q = new URLSearchParams(location.search), tags = {};
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (k) {
+    if (q.get(k)) tags[k] = q.get(k);
+  });
+  if (!tags.utm_source && (q.get('gclid') || q.get('gbraid') || q.get('wbraid'))) {
+    tags.utm_source = 'google'; tags.utm_medium = 'cpc';
+  }
+  try {
+    if (tags.utm_source) sessionStorage.setItem(TAGS, JSON.stringify(tags));
+    else tags = JSON.parse(sessionStorage.getItem(TAGS) || '{}');
+  } catch (e) {}
+
+  document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]').forEach(function (a) {
+    var url = new URL(a.href), page = url.searchParams.get('utm_campaign');
+    if (tags.utm_source) {
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (k) { url.searchParams.delete(k); });
+      Object.keys(tags).forEach(function (k) { url.searchParams.set(k, tags[k]); });
+      if (!tags.utm_content && page) url.searchParams.set('utm_content', page);
+      a.href = url.toString();
+    }
+    a.addEventListener('click', function () {
+      if (window.gtag) window.gtag('event', 'install_click', { page_campaign: page, link_url: a.href });
+    });
+  });
+
+  function start() {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', ID);
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+    document.head.appendChild(s);
+  }
+  if (choice !== 'denied') start();
+
+  var banner = document.querySelector('.consent');
+  if (choice !== 'granted' && choice !== 'denied') banner.hidden = false;
+  banner.addEventListener('click', function (e) {
+    var picked = e.target.getAttribute && e.target.getAttribute('data-choice');
+    if (!picked) return;
+    try { localStorage.setItem(KEY, picked); } catch (e2) {}
+    banner.hidden = true;
+    if (picked === 'denied') {
+      window['ga-disable-' + ID] = true;
+      document.cookie.split(';').map(function (c) { return c.split('=')[0].trim(); })
+        .filter(function (n) { return n === '_ga' || n.indexOf('_ga_') === 0; })
+        .forEach(function (n) {
+          document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+          document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.danimar.dev';
+        });
+    }
+  });
+})();
+</script>`;
 }
 
 const img = (m, alt, attrs = '') =>

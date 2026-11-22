@@ -5,6 +5,7 @@
 export const facts = {
   site: 'https://danimar.dev',
   base: '/mongedocs',
+  analyticsId: 'G-96S59NJRWJ', // the same GA4 property as src/analytics.ts
   storeId: 'ncolfoambfnfgiopbmfophmjejaaalom',
   email: 'danimaribeiro@gmail.com',
 
