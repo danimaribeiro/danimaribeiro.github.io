@@ -195,6 +195,12 @@ export default (f) => {
       },
     },
 
+    consent: {
+      label: 'Consentimiento de analítica',
+      body: 'Este sitio usa cookies de Google Analytics para contar visitas e instalaciones.',
+      accept: 'OK',
+      reject: 'Rechazar',
+    },
     footer: {
       made: 'Monge Docs es obra de <a href="/">Danimar Ribeiro</a>.',
       contact: 'Dudas o problemas: <a href="mailto:{email}">{email}</a>.',

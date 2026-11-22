@@ -195,6 +195,12 @@ export default (f) => {
       },
     },
 
+    consent: {
+      label: 'Consentimento de análise',
+      body: 'Este site usa cookies do Google Analytics para contar visitas e instalações.',
+      accept: 'OK',
+      reject: 'Recusar',
+    },
     footer: {
       made: 'O Monge Docs é feito por <a href="/">Danimar Ribeiro</a>.',
       contact: 'Dúvidas ou problemas: <a href="mailto:{email}">{email}</a>.',

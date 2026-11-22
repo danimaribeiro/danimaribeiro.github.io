@@ -229,3 +229,21 @@ tbody tr:last-child > * { border-bottom: 0; }
 .picks ul { padding-left: 1.2em; }
 .picks li { margin-bottom: 8px; }
 @media (max-width: 680px) { .picks { grid-template-columns: 1fr; } }
+
+/* The analytics banner, asked once per browser (templates.mjs, tracking). */
+.consent {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 20; max-width: 380px; margin-left: auto;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+  box-shadow: 0 12px 32px -12px rgba(30, 42, 34, 0.35); font-size: 15px; line-height: 1.45;
+}
+.consent[hidden] { display: none; }
+.consent p { margin: 0; }
+.consent-buttons { display: flex; justify-content: flex-end; gap: 8px; margin-top: 10px !important; }
+button.btn { border: 0; cursor: pointer; }
+.btn-quiet {
+  background: none; border: 1px solid var(--line); color: var(--ink); cursor: pointer;
+  font: 600 15px/1 var(--text); padding: 10px 14px; border-radius: 8px;
+}
+.btn-quiet:hover { border-color: var(--muted); }
+.consent button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+@media print { .consent { display: none !important; } }
